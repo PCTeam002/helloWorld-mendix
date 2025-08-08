@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
     mendixapp:
-        image: pyndhotaraya:hello-world:${BUILD_VERSION}
+        image: ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_VERSION}
         container_name: mendix-app-helloWorld
         depends_on:
             - db
@@ -99,4 +99,5 @@ services:
 
 volumes:
     db_data:
+
 
